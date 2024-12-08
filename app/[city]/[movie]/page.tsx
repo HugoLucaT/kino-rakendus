@@ -1,12 +1,12 @@
 import Movie from "@/components/movie/movies";
 import SearchResult from "@/components/search/searchresult";
 
-export default async function Index({
+export default function Index({
   params,
 }: {
   params: { city: string; movie: string };
 }) {
-  const { city, movie } = await params;
+  const { city, movie } = params;
 
   if (city === "search") {
     return (
