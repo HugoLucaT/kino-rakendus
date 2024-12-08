@@ -13,7 +13,6 @@ import tartuparnuPrice from "./apollo/tartu-parnu-price";
 
 export default function apolloPriceCalculation(show: Show, supabaseData: any):string{
     let price: number = -1;
-    console.log(supabaseData)
     let age = ageCalculation(supabaseData[0].user_data.birth_date)
     const dateTime = new Date(show.dttmShowStart);
     supabaseData.forEach(element => {
